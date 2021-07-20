@@ -1,28 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function StudyPage({ deckId, name, children }) {
+function StudyNotEnoughCards({ deckId, cardCount }) {
   return (
-    <main className="container study-page">
-      <nav aria-label="breadcrumb">
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <Link to="/">
-              <span className="oi oi-home" /> Home
-            </Link>
-          </li>
-          <li className="breadcrumb-item">
-            <Link to={`/decks/${deckId}`}>{name}</Link>
-          </li>
-          <li className="breadcrumb-item active" aria-current="page">
-            Study
-          </li>
-        </ol>
-      </nav>
-      <h1>{name}: Study</h1>
-      {children}
-    </main>
+    <>
+      <h2>Not enough cards.</h2>
+      <p>
+        You need at least 3 cards to study. There are {cardCount} cards in this
+        deck.
+      </p>
+      <Link to={`/decks/${deckId}/cards/new`} className="btn btn-primary">
+        <span className="oi oi-plus" /> Add Cards
+      </Link>
+    </>
   );
 }
 
-export default StudyPage;
+export default StudyNotEnoughCards;

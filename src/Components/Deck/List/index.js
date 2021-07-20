@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { deleteDeck, listDecks } from "../../utils/api";
+import { deleteDeck, listDecks } from "../../../utils/api";
 
 function DeckList() {
   const [decks, setDecks] = useState([]);
 
-  UseEffect(loadDecks, []);
+  useEffect(loadDecks, []);
 
   function deleteHandler(deckId) {
     const confirmed = window.confirm("Delete Deck?\n\nThis is irreversible");

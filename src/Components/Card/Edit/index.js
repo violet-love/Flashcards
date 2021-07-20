@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import { readCard, readDeck, updateCard } from "../../utils/api";
+import { readCard, readDeck, updateCard } from "../../../utils/api";
 import CardForm from "../Form";
 
 function CardEdit({ title }) {

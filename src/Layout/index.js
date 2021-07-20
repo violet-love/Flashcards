@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import Home from "../Home";
+import Home from "../Components/Home";
 import Study from "../Components/Deck/Study";
 import NotFound from "./NotFound";
 import Header from "./Header";
